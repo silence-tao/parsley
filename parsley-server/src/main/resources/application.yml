@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: parsley-server
+
+server:
+  port: 8000
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    # 此应用为注册中心，false：不向注册中心注册自己。
+    register-with-eureka: false
+    # 注册中心职责是维护服务实例，false：不检索服务。
+    fetch-registry: false
+    service-url:
+      # 设置与Eureka Server的地址,查询服务和注册服务都需要依赖这个地址.
+      # 默认是http://localhost:8761/eureka/;多个地址可使用','风格.
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
