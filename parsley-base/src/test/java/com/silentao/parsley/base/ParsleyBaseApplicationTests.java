@@ -1,10 +1,10 @@
-package com.silentao.parsley.image;
+package com.silentao.parsley.base;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ParsleyImageApplicationTests {
+class ParsleyBaseApplicationTests {
 
     @Test
     void contextLoads() {

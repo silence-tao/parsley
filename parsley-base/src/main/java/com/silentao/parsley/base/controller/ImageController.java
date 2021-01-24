@@ -1,11 +1,8 @@
-package com.silentao.parsley.image.controller;
+package com.silentao.parsley.base.controller;
 
 import com.silentao.parsley.common.vo.ParsleyResponseVO;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.RestTemplate;
-
-import javax.annotation.Resource;
 
 /**
  * @Description
@@ -15,14 +12,9 @@ import javax.annotation.Resource;
 @RestController
 public class ImageController {
 
-    @Resource(name = "restTemplate")
-    private RestTemplate restTemplate;
-
     @RequestMapping("/image")
     public ParsleyResponseVO imageTest() {
-        ParsleyResponseVO parsleyResponseVO = restTemplate
-                .getForObject("http://PARSLEY-LOGIN/test", ParsleyResponseVO.class);
 
-        return parsleyResponseVO;
+        return ParsleyResponseVO.getSuccessInstance();
     }
 }

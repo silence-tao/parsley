@@ -9,19 +9,30 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>com.silentao.parsley.server</groupId>
-    <artifactId>parsley-server</artifactId>
+    <groupId>com.silentao.parsley.base</groupId>
+    <artifactId>parsley-base</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
-    <name>parsley-server</name>
-    <description>parsley-server project for Spring Boot</description>
+    <name>parsley-base</name>
+    <description>parsley-base project for Spring Boot</description>
 
     <dependencies>
         <!-- springframework -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <!-- springframework -->
+
+        <!-- parsley -->
+        <dependency>
+            <groupId>com.silentao.parsley.common</groupId>
+            <artifactId>parsley-common</artifactId>
+        </dependency>
+        <!-- parsley -->
     </dependencies>
 </project>

@@ -1,4 +1,4 @@
-package com.silentao.parsley.login.controller;
+package com.silentao.parsley.base.controller;
 
 import com.silentao.parsley.common.vo.ParsleyResponseVO;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class LoginController {
 
-    @RequestMapping("/test")
+    @RequestMapping("/login")
     public ParsleyResponseVO loginTest() {
         return ParsleyResponseVO.getSuccessInstance("Hello Eureka!");
     }

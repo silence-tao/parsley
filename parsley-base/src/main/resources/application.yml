@@ -1,9 +1,9 @@
 spring:
   application:
-    name: parsley-image
+    name: parsley-base
 
 server:
-  port: 8002
+  port: 8001
 
 eureka:
   client:
